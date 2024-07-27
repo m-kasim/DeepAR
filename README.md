@@ -1,9 +1,13 @@
 # Time series forecasting with DeepAR
-This is a n improved (fixed) implementation of the timeseries forecasting algorithm DeepAR by Amazon.
-- Original paper: https://arxiv.org/abs/1704.04110
+This is an improved (fixed) implementation of the timeseries forecasting algorithm DeepAR by Amazon. I am providing a clear implementation in a Jupyter Notebook and clean Cython 3, without requiring SageMaker.
+
+- Original paper: https://arxiv.org/pdf/1704.04110
 - Documentation by Amazon: https://docs.aws.amazon.com/sagemaker/latest/dg/deepar_how-it-works.html
 
-NOTES: 
-- I am providing ra clear implementation in a Jupyter Notebook and clean Cython 3, without requiring SageMaker.
+### What is DeepAR?
+DeepAR is an algorithm developed by Amazon Research producing accurate probabilistic timeseries forecasts, based on training an auto regressive recurrent network model on a large number of related time series.
+
+### Know issues with selected python module versions
 - Be careful with your `pandas` version as `freq` parameter has been recently deprecated for `df.Timestamp()`
 - If you are using Google Collab to run the code with a `TPU` it might fail with error `TypeError: cannot pickle 'generator' object`, due to PyTorch's generator handling. Therefore, you might need to run in via a CPU instance itself
+- Additionally, if you are using a `numpy` version below `1.25` you might get a `bool` error, so consider using a more recent version.
