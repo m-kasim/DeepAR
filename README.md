@@ -1,3 +1,4 @@
+![DeepAR results](https://raw.githubusercontent.com/m-kasim/DeepAR/main/assets/01_deepar_results.png)
 # Time series forecasting with DeepAR
 This is an improved (fixed) implementation of the timeseries forecasting algorithm DeepAR by Amazon. I am providing a clear implementation in a Jupyter Notebook and clean Cython 3, without requiring SageMaker.
 
