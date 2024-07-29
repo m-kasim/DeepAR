@@ -10,4 +10,3 @@ DeepAR is an algorithm developed by Amazon Research producing accurate probabili
 ### Know issues with selected python module versions
 - Be careful with your `pandas` version as `freq` parameter has been recently deprecated for `df.Timestamp()`
 - If you are using Google Collab to run the code with a `TPU` it might fail with error `TypeError: cannot pickle 'generator' object`, due to PyTorch's generator handling. Therefore, you might need to run in via a CPU instance itself
-- Additionally, if you are using a `numpy` version below `1.25` you might get a `bool` error, so consider using a more recent version.
